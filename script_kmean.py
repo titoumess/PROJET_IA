@@ -28,4 +28,7 @@ def K_mean(latitude, longitude, centroides):
 
 
 cluster = K_mean(latitude, longitude, centroides)#appelle la fonction principale K_mean avec les valeurs donné au préalable
-cluster_json = json.dumps(cluster) #met la réponse attendue en format JSON
+#on ouvre un fichier pour sauveguarder les données
+with open("fichier_cluster.json","w") as fichier:
+  json.dump(cluster,fichier) #met la réponse attendue en format JSON et sauveguarde dans fichier_cluster.json
+
